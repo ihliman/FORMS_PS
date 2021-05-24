@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to Bethany's Pie Shop!</title>
+    <meta name="author" content="Bethany's Pie Shop">
+    <meta name="description" content="Store front for Bethany's Pie Shop">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="mainheader">
+        <nav>
+            <ul>
+                <li><img src="images/cake.svg" height="55" /></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pieoverview.html">All pies</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="width:1000px;margin-left: auto;margin-right: auto;">
+        <aside id="leftmenu">
+            <a href="index.html"><img src="images/bethanylogo.png" /></a>
+
+            <header>
+                <h4 style="text-align: center;">Browse our pies</h4>
+            </header>
+            <ul>
+                <li><a href="pieoverview.html">All pies</a></li>
+                <li><a href="cheesecakes.html">Cheese cakes</a></li>
+                <li><a href="fruitpies.html">Fruit pies</a></li>
+                <li><a href="seasonalpies.html">Seasonal pies</a></li>
+            </ul>
+        </aside>
+        <main id="main">
+            <h1>Contact Us</h1>
+            <form action="contact.html" method="POST" enctype="application/x-www-form-urlencoded">
+
+                <fieldset>
+                    <legend>Contact info</legend>
+                    <div>
+                        <label for="customerEmail">*Your Name:</label>
+                        <input type="text" minlength="8" maxlength="24" required name="customerName" id="">
+                    </div>
+                    <div>
+                        <label for="customerEmail">Your Email:</label>
+                        <input type="email" name="customerEmail" id="">
+                    </div>
+                    <div>
+                        <label for="customerPhone">Your phone:</label>
+                        <input type="tel" pattern="\(\d{3}\) \d{3}-\d{4}" name="customerPhone" id="">
+
+                        <input type="radio" name="phonetype" value="cell" id="" checked>Cell
+                        <input type="radio" name="phonetype" value="work" id="">Work
+                        <input type="radio" name="phonetype" value="home" id="">Home
+                    </div>
+                    <div>
+                        <label for="okToContact">OK to contact:</label>
+                        <input type="checkbox" name="okToContact" value="phone"> by phone
+                        <input type="checkbox" name="okToContact" value="email"> by email
+                    </div>
+                    <input type="hidden" name="source" value="ContactForm">
+                </fieldset>
+                <fieldset>
+                    <legend>Feedback</legend>
+                    <div>
+                        <label for="feedbackText">*Feedback:</label>
+                        <textarea required name="feedbackText" id="" cols="40" rows="3"></textarea>
+                    </div>
+                    <p>Feedback type:</p><select name="feedbackType" multiple="multiple" size="6" id="">
+                    <optgroup label="Stores">
+                        <option value="webStore">Web Store</option>
+                        <option value="physicalStore">Physical store</option>
+                    </optgroup>
+                    <option value="webTech">Website problem</option>
+                    <option value="general">General Comment</option>
+                </select>
+                    <p>Severity:</p><input type="number" min="1" max="10" name="severity">
+                    <p>Issue date:</p><input type="date" name="submitDate">
+                    <p>Severity range:</p><input type="range" min="1" max="100" name="severityRange">
+                    <p>Issue time:</p><input type="time" name="issueTime" id=""><br/>
+                </fieldset>
+                <input type="submit" value="Send Contact" name="" id="">
+            </form>
+        </main>
+
+        <footer>
+            <p>Our address is <address>Bethany's Pie Shop - Bakery Street 555 Brussels Belgium</address>
+            </p>
+            <p><small>&copy; 2020 Bethany's Pie Shop - All rights reserved</small></p>
+            <p>Contact us via <a href="mailto:info@bethanyspieshop.com">email</a></p>
+            <p><small><a href="https://www.snowball.be">Created by Snowball</a></small></p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
